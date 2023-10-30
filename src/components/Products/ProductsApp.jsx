@@ -151,7 +151,7 @@ const ProductsApp = () => {
       <ProductItem
         onAddProduct={addProductHandler}
         onRemoveProduct={removeProductHandler}
-        onRemoveProductCard={ResetQuantity}
+        onReset={ResetQuantity}
         products={products.products}
       />
       <h1>TOTAL : ${products.totalPrice}</h1>

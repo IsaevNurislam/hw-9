@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProductsItem = ({
-  products,
-  onAddProduct,
-  onRemoveProduct,
-  onRemoveProductCard,
-}) => {
+const ProductsItem = ({ products, onAddProduct, onRemoveProduct, onReset }) => {
   return (
     <>
       {
@@ -53,9 +48,7 @@ const ProductsItem = ({
                   <CounterBtn onClick={() => onRemoveProduct(id)}>-</CounterBtn>
                 </td>
                 <td>
-                  <RemoveBtn onClick={() => onRemoveProductCard(id)}>
-                    {remove}
-                  </RemoveBtn>
+                  <RemoveBtn onClick={() => onReset(id)}>{remove}</RemoveBtn>
                 </td>
               </tr>
             )
